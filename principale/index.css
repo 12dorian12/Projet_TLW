@@ -1,0 +1,147 @@
+/*#865BC5*/
+@font-face {
+    font-family: "BM";
+    src: url("media/BerthaMelanie.ttf");
+}
+
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: linear-gradient(135deg,#865BC5,white); */
+}
+
+/*################################## Header ########################################*/
+
+header{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid black;
+    background-color: #1B2631;
+    display: flex;
+}
+header > div{
+    margin-right: auto;
+    display: flex;
+}
+header > div > h1{
+    color: teal;
+    font-family: "BM";
+    display: block;
+    margin: auto 1%;
+}
+header > div > img{
+    display: block;
+    margin: auto 1%;
+    width: 50px;
+    height: 50px;
+}
+
+/*################################## Nav ########################################*/
+
+
+header > nav{
+    margin-left: auto;
+    display: flex;
+    width: 40%;
+}
+header > nav > a {
+    border: solid white;
+    border-radius: 9999px;
+    width: 50%;
+    height: 60%;
+    margin: auto 5%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.5s, filter 0.5s;
+}
+header > nav > a > img{
+    width: 10%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin: auto 4% auto auto;
+    
+}
+header > nav > a > h1{
+    margin: auto auto auto 0;
+    font-size: 120%;
+    color: inherit;
+}
+header > nav > a:hover{
+    filter: invert(100%);
+    background-color: black;
+}
+
+/*################################## Footer ########################################*/
+
+footer{
+    width: 100%;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    background-color: #1B2631;
+}
+footer > a{
+    margin: 1em auto;
+    color: white;
+}
+
+/*################################## main ########################################*/
+main{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+main > div{/* le padding depend de la largeur de l'objet lui meme d'ou le ratio constant */
+    width: 100%;
+    padding-bottom: 53%;
+    position: relative;
+}
+main > div > div{
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    
+    background-image: url("media/wall.jpg");
+    background-size: cover;
+}
+/*################################## aside ########################################*/
+aside{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(255, 0, 0, 0.151); */
+}
+
+article{
+    height: 50%;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    background-color: #ffffffaa;
+    transition: width 0.5s, height 0.5s;
+}
+
+article:hover{
+    height: 80%;
+    width: 80%;
+}
+
+article > img {
+    display: block;
+    margin: auto;
+    background-color: black;
+    border-radius: 9999px;
+    padding: 10%;
+    width: 60%;
+}
+article > h2 {
+    font-size: 120%;
+    height: 30%;
+}
