@@ -1,0 +1,21 @@
+body{
+    background-image: "caleçon.jpg";
+}
+
+div.p1 {
+    border: rgb(0, 2, 128) solid 3px;
+    height: 33%;
+    width: 100%;
+}
+
+div.p2 {
+    border: steelblue solid 3px;
+    height: 33%;
+    width: 100%;
+}
+
+div.p3 {
+    border: rgb(180, 70, 85) solid 3px;
+    height: 33%;
+    width: 100%;
+}
