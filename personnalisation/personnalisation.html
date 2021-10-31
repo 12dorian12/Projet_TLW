@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon Caleçon en ligne</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../principale/media/logo.png">
+
+        <link rel="stylesheet" href="../principale/header&footer.css">
+        <link rel="stylesheet" href="personnalisation.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        
+        <main>
+            <div id="contenaire">
+
+                <div id="canvasCont">
+                    <canvas id="customCanvas" width = "250" height="250"></canvas>
+                </div>
+
+                <div id="sectionPrix">
+                    <div id="prix">  </div>
+                    
+                    <div id="quantiter"> 
+                        <div id="subLess" onclick="subLessFunc()"> - </div> 
+                        <div id="numQuant"> 1 </div> 
+                        <div id="addMore" onclick="addMoreFunc()"> + </div> 
+                    </div>
+                    <button class="buyBtn" onclick="sendToPanier()">
+                        <div class="bororo"></div>
+                        <div class="rototo"></div>
+                        <div class="achat">Ajouter au panier</div>
+                    </button>
+                </div>
+
+                <form id="customForm">
+                    <div id="name"></div>
+                    <div id="taille" class="formLigne">
+                        <div class="ligneName">Taille :</div>
+                        <div class="allInput">
+                            <input type="button" class="btnText" value="XS" onclick="tFunc(0)"> 
+                            <input type="button" class="btnText" value="S" onclick="tFunc(1)"> 
+                            <input type="button" class="btnText" value="M" onclick="tFunc(2)">
+                            <input type="button" class="btnText" value="L" onclick="tFunc(3)">
+                            <input type="button" class="btnText" value="XL" onclick="tFunc(4)">
+                        </div>
+                    </div>
+                    <div class="formLigne">
+                        <div class="ligneName">Couleur 1 : </div>
+                        <div class="allInput">
+                            <div class="cercleCouleur"><input type="button" class="btnCircle couleur10" onclick="cFunc(0)"></div>
+                            <div class="cercleCouleur"><input type="button" class="btnCircle couleur11" onclick="cFunc(1)"></div>
+                            <div class="cercleCouleur"><input type="button" class="btnCircle couleur12" onclick="cFunc(2)"></div>
+                            <div class="cercleCouleur"><input type="button" class="btnCircle couleur13" onclick="cFunc(3)"></div>
+                            <div class="cercleCouleur"><input type="button" class="btnCircle couleur14" onclick="cFunc(4)"></div>
+                        </div>
+                    </div>
+                    <div class="formLigne">
+                        <div class="ligneName">Couleur 2 :</div>
+                        <div class="allInput">
+                            <div class="cercleCouleur2"><input type="button" class="btnCircle couleur20" onclick="c2Func(0)"></div> 
+                            <div class="cercleCouleur2"><input type="button" class="btnCircle couleur21" onclick="c2Func(1)"></div> 
+                            <div class="cercleCouleur2"><input type="button" class="btnCircle couleur22" onclick="c2Func(2)"></div>
+                            <div class="cercleCouleur2"><input type="button" class="btnCircle couleur23" onclick="c2Func(3)"></div>
+                            <div class="cercleCouleur2"><input type="button" class="btnCircle couleur24" onclick="c2Func(4)"></div>
+                        </div>
+                    </div>
+                    <div id="motif" class="formLigne">
+                        <div class="ligneName">Motif :</div>
+                        <div class="allInput">
+                            <div class="cercleMotif"><input type="button" class="btnCircle motif1" onclick="mFunc(0)"></div> 
+                            <div class="cercleMotif"><input type="button" class="btnCircle motif2" onclick="mFunc(1)"></div> 
+                            <div class="cercleMotif"><input type="button" class="btnCircle motif3" onclick="mFunc(2)"></div>
+                            <div class="cercleMotif"><input type="button" class="btnCircle motif4" onclick="mFunc(3)"></div>
+                            <div class="cercleMotif"><input type="button" class="btnCircle motif5" onclick="mFunc(4)"></div>
+                        </div>
+                    </div>
+                    <div id="qualiter" class="formLigne">
+                        <div class="ligneName">Qualiter :</div>
+                        <div class="allInput">
+                            <input type="button" class="btnGText" value="Coton" onclick="qFunc(0)">
+                            <input type="button" class="btnGText" value="Polyester" onclick="qFunc(1)">
+                            <input type="button" class="btnGText" value="Lin" onclick="qFunc(2)">
+                            <input type="button" class="btnGText" value="Microfibre" onclick="qFunc(3)">
+                        </div> 
+                    </div>
+                    <div id="image" class="formLigne">
+                        <div class="ligneName">Image : </div>
+                        <div class="allInput"><input type="button" id="btnLien" value="Load"></div>
+                    </div>
+                    <div id="imagePos" class="formLigne">
+                        <div class="ligneName">Position : </div>
+                        <div class="allInput">
+                            <input type="button" class="btnG2Text" value="Avant" onclick="pFunc(0)">
+                            <input type="button" class="btnG2Text" value="Arière" onclick="pFunc(1)">
+                            <input type="button" class="btnG2Text" value="Droit" onclick="pFunc(2)">
+                            <input type="button" class="btnG2Text" value="Gauche" onclick="pFunc(3)">
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
+    <script src="../principale/header&footer.js"></script>
+    <script src="personnalisation.js"></script>
+</html>

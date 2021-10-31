@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "BM";
+    src: url("media/BerthaMelanie.ttf");
+}
+html{
+    scroll-behavior: smooth;
+}
+/*################################## Header ########################################*/
+
+header{
+    width: 100%;
+    height: 20vw;
+    border-bottom: 2px solid steelblue;
+    background-color: #1B2631;
+    display: flex;
+    font-size: 3vw;
+}
+header > div{
+    height: 100%;
+    margin-right: auto;
+    display: flex;
+}
+header > div > h1 {
+    margin: auto;
+    height: 100%;
+    display: flex;
+}
+header > div > h1 > a{
+    color: steelblue;
+    font-family: "BM";
+    margin: auto 0.3em auto 0.5em;
+    text-decoration: none;
+}
+header > div > img{
+    margin: auto 0;
+    width: 2em;
+}
+@media only screen and (min-width: 601px) {
+    header{
+        height: 5vw;
+        font-size: 1.5vw;
+    }
+}
+
+/*################################## Nav ########################################*/
+
+
+header > nav{
+    margin: auto 1em auto auto;
+}
+header > nav > a {
+    border: 1px solid white;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.5s, filter 0.5s;
+    float: left;
+    margin: auto 1em;
+    padding: 0.5em;
+    display: flex;
+}
+header > nav > a > img{
+    width: 1.5em;
+    display: block;
+    margin: auto;
+}
+header > nav > a > span{
+    margin: auto 1em;
+    color: inherit;
+    display: none;
+    font-size: 1.5vw;
+}
+header > nav > a:hover{
+    filter: invert(100%);
+    background-color: black;
+}
+@media only screen and (min-width: 601px) {
+    header > nav > a > span{
+        display: block;
+    }
+}
+/*################################## Footer ########################################*/
+
+footer{
+    width: 100%;
+    border-top: 1px solid black;
+    display: flex;
+    bottom: 0;
+    background-color: #1B2631;
+}
+footer > a{
+    margin: 1em auto;
+    color: white;
+}
+
+
+#toTheTop{
+    z-index: 12;
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    background-color: black;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 9999px;
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 601px) {
+    #toTheTop{
+        width: 5vw;
+        height: 5vw;
+    }
+}

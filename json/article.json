@@ -1,0 +1,103 @@
+{ 
+    "slip" : [
+        {
+            "nom" : "Slip Kangourou",
+            "imgSrc" : "/principale/media/sousVetement/slipKangourou.png",
+            "prix" : 14.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Shorty",
+            "imgSrc" : "/principale/media/sousVetement/shorty.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Jockstrap",
+            "imgSrc" : "/principale/media/sousVetement/jockstrap.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Caleçon",
+            "imgSrc" : "/principale/media/sousVetement/calecon.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Boxer court",
+            "imgSrc" : "/principale/media/sousVetement/boxerCourt.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Boxer long",
+            "imgSrc" : "/principale/media/sousVetement/boxerLong.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Slip",
+            "imgSrc" : "/principale/media/sousVetement/slip.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "String",
+            "imgSrc" : "/principale/media/sousVetement/String.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        },
+        {
+            "nom" : "Bikini",
+            "imgSrc" : "/principale/media/sousVetement/bikini.png",
+            "prix" : 19.99,
+            "commentaires" : ["petit","rapide","confortable"],
+            "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "couleur2" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
+            "motif" : [["lien",0], ["lien",1.12],["lien",1.12],["lien",1.12],["lien",1.12]],
+            "qualiter" : [5,4,8,4],
+            "prixImage" : 2
+        }
+    ]
+}
