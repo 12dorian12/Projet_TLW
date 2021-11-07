@@ -86,7 +86,7 @@
         },
         {
             "nom" : "String",
-            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/String.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/string.png",
             "prix" : 19.99,
             "commentaires" : ["osé","minimaliste","sexy"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
