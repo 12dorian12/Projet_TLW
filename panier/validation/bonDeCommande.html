@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon Caleçon en ligne</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/media/panier.png">
+
+        <link rel="stylesheet" href="/principale/header&footer.css">
+        <link rel="stylesheet" href="validation.css">
+    </head>
+
+    <body onload="recapFill()">
+
+        <header>
+            
+        </header>
+
+        <main>
+            <div id="bon">
+                <div id="topInfo">
+                    <h1 id="h1bon">BON DE COMMANDE</h1>
+                    <p>DATE <span id="date"></span></p>
+                    <p>COMMANDE N° <span id="commandeNum"></span></p>
+                </div>
+                <div id="tabInfo">
+                    <div id="caseGauche">
+                        <h2>VENDEUR</h2>
+                        <p>Nom de la société <span id="nomSoc">MonCaleçon</span></p>
+                        <p>Adresse <span id="adresseSoc">3 Rue Victor Grignard</span></p>
+                        <p>Ville, code postal <span id="villeSoc">Villeurbanne, 69100</span></p>
+                        <p>Téléphone <span id="telephoneSco">06 82 82 50 50</span></p>
+                    </div>
+                    <div id="caseDroit">
+                        <h2>CLIENT</h2>
+                        <p class="endText">Nom <span id="nomCli"></span></p>
+                        <p class="endText">Adresse <span id="adresseCli"></span></p>
+                        <p class="endText">Ville, code postal <span id="villeCli"></span></p>
+                        <p class="endText">Téléphone <span id="telephoneCli"></span></p>
+                    </div>
+                </div>
+                <div id="hideTab">
+                    <div id="tabPanier">
+                        <div class="col1 title" id="nomTab">NOM DU PRODUIT</div>
+                        <div class="col2 title id="quantTab">QTÉ</div>
+                        <div class="col3 title" id="dateTab">DATE DE LIVRAISON</div>
+                        <div class="col4 title" id="prixUniTab">PRIX UNITAIRE</div>
+                        <div class="col5 title" id="prixTab">PRIX TOTAL</div>
+                        <template id="ligneTab">
+                            <div class="col1 ligne nomLigne"></div>
+                            <div class="col2 ligne quantLigne"></div>
+                            <div class="col3 ligne dateLigne"></div>
+                            <div class="col4 ligne prixUniLigne"></div>
+                            <div class="col5 ligne prixLigne"></div>
+                        </template>
+                    </div>
+                </div>
+                <div id="tabFin">
+                    <div id="Remarque">
+                        <h2>REMARQUE/NOTES</h2>
+                        <div id="remarqueClient">
+
+                        </div>
+                        <div id="remarqueSoc">
+                            <p id="distanceP"></p>
+                            <p id="quantP"></p>
+                            <p>
+                                Une remise de 10% est apliquer pour une commande de au moin 10 articles.
+                                La livraison est offert pour une distance de moin de 20Km
+                            </p>
+                            <div id="rogner"><iframe></iframe></div>
+                        </div>
+                    </div>
+                    <div id="prixSection">
+                        <div class="prixDiv">SOUS-TOTAL <div class="prix" id="sousTotal"></div></div>
+                        <div class="prixDiv">REMISE (%) <div class="prix" id="remise"></div></div>
+                        <div class="prixDiv">SOUS-TOTAL AVEC REMISE <div class="prix" id="totalRemise"></div></div>
+                        <div class="prixDiv" id="expresseDiv">LIVRAISON EXPRESSE <div class="prix" id="expresse"></div></div>
+                        <div class="prixDiv">EXPEDITION <div class="prix" id="expedition"></div></div>
+                        <div class="prixDiv" id="totalDiv">TOTAL <div class="prix" id="total"></div></div>
+                    </div>
+                </div>
+            </div>
+            
+        </main> 
+
+        <footer>
+            
+        </footer>
+    </body>
+
+    <script src="/principale/header&footer.js"></script>
+    <script src="validation.js"></script>
+</html>

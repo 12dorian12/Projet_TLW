@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon Caleçon en ligne</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/media/panier.png">
+
+        <link rel="stylesheet" href="/principale/header&footer.css">
+        <link rel="stylesheet" href="../seConnecter.css">
+    </head>
+
+    <body onload="redirDuTur()">
+
+        <header>
+            
+        </header>
+
+        <main>
+            
+            <form id="formumu">
+              
+                    <h1>Créez votre compte MonCaleçon</h1>
+                    <div id="errorMsg"></div>
+
+                    <div class="inputForm">
+                        <input type="text" id="mail" class="allF" required="required"><br>
+                        <span>Adresse mail</span>
+                    </div>
+
+                    <div class="inputForm">
+                        <input type="text" id="mdp" class="allF" required="required"><br>
+                        <span>Mot de passe</span>
+                    </div>
+
+                    <div class="inputForm">
+                        <input type="text" id="prenom" class="allF" required="required"><br>
+                        <span>Prénom</span>
+                    </div>
+                    <div class="inputForm">
+                        <input type="text" id="nom" class="allF" required="required"><br>
+                        <span>Nom</span>
+                    </div>
+                    
+                    <div class="inputForm">
+                        <input type="text" id="num" class="allF" required="required"><br>
+                        <span>Numéro</span>
+                    </div>
+                    
+                    <div class="inputForm">
+                        <input type="text" id="adresse" class="allF" required="required"><br>
+                        <span>Adresse de livraison</span>
+                    </div>
+                    
+                    <div class="inputForm">
+                        <input type="text" id="ville" class="allF" required="required"><br> 
+                        <span>ville</span>
+                    </div>
+
+                    <button id="buttonVal" onclick="recupForm()">Valider</button>
+                    <a href="../connexion/connexion.html" id="lienInscription">J'ai déjà un compte</a>
+
+            </form> 
+            
+        </main> 
+
+        <footer>
+            
+        </footer>
+    </body>
+
+    <script src="/principale/header&footer.js"></script>
+    <script src="inscription.js"></script>
+</html>

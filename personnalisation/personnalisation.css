@@ -1,12 +1,12 @@
 body{
     margin: 0;
-    overflow-x: hidden;
+    width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 *{
     box-sizing: border-box; /* definit les marge a padding a l'interrieur de la taille*/
 }
-
 
 /*################################## main ########################################*/
 
@@ -17,12 +17,12 @@ main{
 }
 #contenaire{
     margin: auto;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     display: grid;
-    grid: 3fr 4fr 1fr/ 1;
-    gap: 1em;
-    padding: 1em;
+    grid: 1fr /80vw;
+    justify-content: space-around;
+    gap: 25px;
 }
 
 /*################################## canvas ########################################*/
@@ -31,16 +31,21 @@ main{
     margin-top: 1em;
     height: 0;
     grid-row: 1;
+    grid-column: 1;
     width: 100%;
     padding-bottom: 100%;
     position: relative;
 }
-#customCanvas{
+#customCanvas1{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #dddddd;
-    
+    background-color: #1B2631;   
+}
+#customCanvas2, #customCanvas3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 /*################################## sectoin prix ########################################*/
@@ -54,6 +59,7 @@ main{
     grid-template: 1fr 1fr / 1fr 1fr;
     justify-items: center;
     align-items: center;
+    margin-bottom: 1em;
 }
 #prix{
     grid-row: 1;
@@ -95,33 +101,17 @@ main{
 .buyBtn{
     grid-row: 2;
     grid-column: 1/3;
-    position: relative;
-    overflow: hidden;
     border-radius: 9px;
+    border: none;
     width: 250px;
     height: 50px;
     font-size: 25px;
+    transition: filter 0.5s;
+    background-color: #1B2631;
+    color: #dddddd;
 }
-.bororo{
-    z-index: 1;
-    border: solid white ;
-    border-width: 0.2em;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;   
-}
-.rototo{
-    z-index: 2;
-    position: absolute;
-    top: 20%; left: -10%;
-    width: 120%;
-    height: 60%;
-    background-color: steelblue;
-    border-width: 0.2em;
-    transition: transform 1s;
-    transition-timing-function: cubic-bezier(0.0, 0.0, 1.0, 1.0);
-}
-.buyBtn:hover > .rototo{
-    transform: rotate(180deg);
+.buyBtn:hover{
+    filter: invert(100%) drop-shadow(0 0 1vw steelblue);
 }
 .achat{
     z-index: 3;
@@ -141,15 +131,16 @@ main{
     grid-row: 2;
     font-size: 25px;
     font-weight: bold;
-    padding: 1em;
 }
+
 #name{
-    font-size: 50px;
+    text-align: center;
+    font-size: 35px;
     margin-bottom: 0.5em;
 }
 .formLigne{
     border-top: 1px solid rgb(180, 180, 180);
-    padding: 1em;
+    padding: 1em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -170,9 +161,8 @@ main{
 
 }
 .btnGText, .btnG2Text{
-    font-size: 15px;
-    width: 90px;
-
+    font-size: 12px;
+    width: 70px;
 }
 .btnText:hover, .btnGText:hover, .btnG2Text:hover{
     background-color: #dddddd;
@@ -180,7 +170,7 @@ main{
 
 .allInput{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-grow: 1;
 }
@@ -213,21 +203,37 @@ main{
     height: 50px;
 }
 
+#btnCentre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    height: 50px;
+    width: 70%;
+    max-width: 15em;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #1B2631;
+    color: white;
+    border-radius: 99px;
+}
 
 .motif1{
-    background-image: url(imageMotif/uni.png);
+    background-image: url(/media/imageMotif/uni.png);
 }
 .motif2{
-    background-image: url(imageMotif/diagonal.png);
+    background-image: url(/media/imageMotif/diagonal.png);
 }
 .motif3{
-    background-image: url(imageMotif/careau.png);
+    background-image: url(/media/imageMotif/careau.png);
 }
 .motif4{
-    background-image: url(imageMotif/carre.png);
+    background-image: url(/media/imageMotif/carre.png);
 }
 .motif5{
-    background-image: url(imageMotif/moitier.png);
+    background-image: url(/media/imageMotif/moitier.png);
 }
 
 @media only screen and (min-width: 601px) {
@@ -239,16 +245,34 @@ main{
         grid-row: 1;
         grid-column: 1;
     }
-    
-    
     #sectionPrix{
         grid-row: 2;
         grid-column: 1;
     }
-    
-    
     #customForm{
+        padding: 1em;
         grid-row: 1/3;
         grid-column: 2/3;
+    }
+    #name{
+        text-align: start;
+    }
+    .allInput{
+        justify-content: flex-end;
+    }
+    .formLigne{
+        padding: 1em;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #customForm{
+        font-size: 25px;
+    }
+    #name{
+        font-size: 50px;
+    }
+    .btnGText, .btnG2Text{
+        font-size: 15px;
+        width: 90px; 
     }
 }

@@ -1,9 +1,14 @@
 body{
     margin: 0;
+    width: 100vw;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    padding-bottom: 15vw;
+    padding-bottom: 80px;
+}
+@media only screen and (min-width: 601px) {
+    body{
+        padding-bottom: 0;
+    }
 }
 *{
     box-sizing: border-box; /* definit les marge a padding a l'interrieur de la taille*/
@@ -13,90 +18,102 @@ body{
 /*################################## main ########################################*/
 
 main{
-    width: 100%;
-    margin: auto;
-    background-color: #dddddd;
-    position: relative;
-}
-/*#2596be*/
-/*#f7f7f7*/
-/*################################## Article ########################################*/
-
-article{
     width: 100vw;
-    padding: 2vw;
-    list-style-type: none;
-
-    display: grid;
-    grid: repeat(9, 1fr)/1;
-    gap: 2vw;
-
-    user-select: none;
-}
-section{
-    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: #ffffff;
+    position: relative;
     display: flex;
 }
-.propHeigth{
-    margin: auto;
+
+/*################################## section ########################################*/
+
+section{
+    width: 100vw;
+    font-size: 5vw;
+    list-style-type: none;
+    padding: 2em 0;
+    display: grid;
+    grid: 1fr /1fr 80vw 1fr;
+    gap: 1em;
+    background-color: #dddddd;
+    user-select: none;
+}
+article{
+    grid-column: 2;
     width: 100%;
+    height: 0px;
     padding-bottom: 150%;
     position: relative;
 }
 .absoluteBox{
     position: absolute;
-    padding: 1vw;
+    padding: 1em;
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: #ffffff;
-    border-radius: 4vw;
-    border: solid steelblue;
-    border-width: 2px;
+    border-radius: 5vw;
+    border: outset steelblue 3px;
 }
-
-.absoluteBox > div > img{
-    display: block;
+#imgDiv {
+    width: 80%;
+    background-color: #dddddd;
     margin: auto;
     border-radius: 9999px;
-    padding: 2%;
-    background-color: black;
-    filter: grayscale(100%);
-    width: 80%;
-    transition: filter 0.5s;
+    border: inset steelblue 3px;
+}
+.absoluteBox > div > img{
+    width: 100%;
+    display: block;
+    padding: 5%;
+    transition: filter 0.25s;
 }
 .absoluteBox:hover > div > img{
-    filter: hue-rotate(180deg) drop-shadow(0 0 1vw steelblue);
+    filter: invert(100%) drop-shadow(0 0 3px steelblue);
 }
-.absoluteBox > span > h2{
-    font-size: initial;
+.absoluteBox > h2 > span{
+    font-family: "BM";
 }
 
 @media only screen and (min-width: 601px) {
-    article{
-        grid: repeat(3, 1fr)/repeat(3, 1fr);
-        width: 84vw;
-        margin-left: auto;
+    #filterListe{
+        min-width: 150px;
     }
-    body{
-        padding-bottom: 0;
+    section{
+        padding: 2em;
+        font-size: 22px;
+        grid: 1fr / repeat(auto-fill, 350px) ;
+        width: 100%;
+        column-gap: 0.5em;
+        row-gap: 1em;
+        justify-content: space-around;
+        border-left: solid #aaaaaa 2px;
+    }
+    article{
+        grid-area: auto;
     }
 }
+@media only screen and (min-width: 768px) {
+    #filterListe{
+        min-width: 200px;
+    }
 
+}
 /*################################## filter liste ########################################*/
 
 #filterListe{
-    background-color: #ffffff;
-    border-top: solid #aaaaaa;
-    border-width: 2px;
-    padding: 1vw;
-    position: fixed;
     z-index: 10;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 15vw;
+    height: 80px;
+    background-color: #ffffff;
+    border-top: solid #aaaaaa 2px;
+    padding-left: 1em;
+    transition: height 0.5s;
 }
-#filterListe > div{
-    height: 10vw;
-    width: 20%;
+#filtretitle{
+    height: 80px;
+    width: 95px;
     margin-right: auto;
     display: flex;
 }
@@ -104,30 +121,61 @@ section{
     margin: auto;
     text-align: center;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: 25px;
 }
 #filterListe > div > img{
-    height: 5vw;
+    height: 25px;
     margin: auto;
 }
+#filterUl{
+    line-height: 25px;
+    list-style-type: circle;
+    user-select: none;
+}
+#filterUl > li{
+    width: 75px;
+    border-radius: 9999px;
+    text-align: center;
+}
+#filterUl > li:hover{
+    background-color: #dddddd;
+}
+
+#openFilter{
+    position: fixed;
+    bottom: 10px;
+    background-image: url("/media/litUpArrow.png");
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    padding: none;
+    transition: transform 0.5s;
+    /*centrer un element fixed est plus dificle*/
+    left: 50%;
+    margin-left: -15px;
+}
+
 @media only screen and (min-width: 601px) {
     #filterListe{
-        position: absolute;
-        width: 15vw;
+        position: sticky;
+        top: 0px;
+        width: 150px;
         border-top: none;
-        border-right: solid #aaaaaa;
-        border-bottom: solid #aaaaaa;
-        top: 0;
-        left: 0;
+        padding: 0px;
     }
-    #filterListe > div > span{
-        font-size: 2vw;
+    #filtretitle{
+        margin: auto;
+        width: 90px;
+        display: flex;
     }
-    #filterListe > div > img{
-        height: 2vw;
+    #openFilter{
+        display: none;
     }
-    #filterListe > div{
-    width: 100%;
-    display: flex;
+}
+@media only screen and (min-width: 768px) {
+    #filterListe{
+        width: 200px;
     }
+
 }

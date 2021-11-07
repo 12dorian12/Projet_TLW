@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon Caleçon en ligne</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/media/panier.png">
+
+        <link rel="stylesheet" href="/principale/header&footer.css">
+        <link rel="stylesheet" href="../seConnecter.css">
+    </head>
+
+    <body onload="afficheInfos()">
+
+        <header>
+            
+        </header>
+
+        <main>
+            <div id="formumu">
+                <h1>Vos Informations</h1>
+
+                <div class="inputForm">
+                    <div type="text" id="mail" class="allF blackColor"></div>
+                    <span class="titleSpan">Adresse mail</span>
+                </div>
+
+                <div class="inputForm">
+                    <div type="text" id="prenom" class="allF blackColor"></div>
+                    <span class="titleSpan">Prénom</span>
+                </div>
+                <div class="inputForm">
+                    <div type="text" id="nom" class="allF blackColor"></div>
+                    <span class="titleSpan">Nom</span>
+                </div>
+                
+                <div class="inputForm">
+                    <div type="text" id="numero" class="allF blackColor"></div>
+                    <span class="titleSpan">Numéro</span>
+                </div>
+                
+                <div class="inputForm">
+                    <div type="text" id="adresse" class="allF blackColor"></div>
+                    <span class="titleSpan">Adresse de livraison</span>
+                </div>
+                
+                <div class="inputForm">
+                    <div type="text" id="ville" class="allF blackColor"></div> 
+                    <span class="titleSpan">ville</span>
+                </div>
+            
+                <button onclick="deconnexion()" id="logout">Déconnexion</button>
+            </div>
+        </main> 
+
+        <footer>
+            
+        </footer>
+    
+        <script src="/principale/header&footer.js" defer></script>
+        <script src="connected.js"></script>
+    </body>
+</html>
+

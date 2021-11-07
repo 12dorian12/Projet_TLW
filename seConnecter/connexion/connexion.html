@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon Caleçon en ligne</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/media/panier.png">
+
+        <link rel="stylesheet" href="/principale/header&footer.css">
+        <link rel="stylesheet" href="../seConnecter.css">
+    </head>
+
+    <body onload="redirDuTur()"> 
+
+        <header>
+            
+        </header>
+
+        <main>
+            
+            <form id="formumu">
+              
+                    <h1>Connectez vous à votre compte MonCaleçon</h1>
+                    <div id="errorMsg"></div>
+                    
+                    <div class="inputForm colorRed">
+                        <input type="text" id="mailVerif" class="allF colorRed" required="required"><br>
+                        <span>Adresse mail</span>
+                    </div>
+
+                    <div class="inputForm colorRed">
+                        <input type="text" id="mdpVerif" class="allF colorRed" required="required"><br>
+                        <span>Mot de passe</span>
+                    </div>
+
+                    <button id="buttonVal" onclick="recupForm()">Connexion</button>
+                    <a href="../inscription/inscription.html" id="lienInscription">Créer un compte</a>
+                    
+            </form>
+
+            
+            
+        </main> 
+
+        <footer>
+            
+        </footer>
+
+    </body>
+
+    <script src="/principale/header&footer.js"></script>
+    <script src="connexion.js"></script>
+</html>

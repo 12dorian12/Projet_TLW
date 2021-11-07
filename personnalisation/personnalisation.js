@@ -4,18 +4,32 @@ var customProdiut = {
     "cou2" : 0,
     "motif" : 0,
     "qualiter" : 0,
-    "position" : 0,
-    "prix" : 19.99,
+    "prix" : 0,
     "type" : localStorage["slipType"],
-    "quantiter": 1
+    "quantiter": 1,
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "nom": ""
 }
+
+var lignes = document.querySelectorAll(".formLigne")
 
 var goodSlip; /*initialiser par le fetch*/
 
-var c = document.querySelector('#customCanvas');
-var ctx = c.getContext("2d");
+var canvas1 = document.querySelector('#customCanvas1');
+var ctx1 = canvas1.getContext("2d");
+var canvas2 = document.querySelector('#customCanvas2');
+var ctx2 = canvas2.getContext("2d");
+var canvas3 = document.querySelector('#customCanvas3');
+var ctx3 = canvas3.getContext("2d");
 
-
+var imgSlip = new Image;
+var imgSlipInt = new Image;
+var imgSlipMotif = new Image;
+imgSlip.onload = draw
+imgSlipInt.onload = draw
+imgSlipMotif.onload = draw
 /*################################## XMLHttpRequest ########################################*/
 
 
@@ -23,10 +37,13 @@ fetch("../json/article.json")
 .then((response) => response.json())
 .then((articles)=>{
     goodSlip = articles.slip[parseInt(localStorage["slipType"])]
-    
+    imgSlip.src = goodSlip.imgSrc;
+    imgSlipInt.src = goodSlip.imgSrc.replace(/.png/, " (1).png");
+    imgSlipMotif.src = "";
 
     var name = document.querySelector("#name");
     name.innerHTML = goodSlip.nom;
+    customProdiut.nom = goodSlip.nom
     setPrix();
     setCouleur();
     resetStyle();
@@ -40,7 +57,6 @@ function setStyle(customInfo) {
     c2Func(customInfo.cou2);
     mFunc(customInfo.motif);
     qFunc(customInfo.qualiter);
-    pFunc(customInfo.position);
 }
 
 function resetStyle() {
@@ -49,7 +65,6 @@ function resetStyle() {
     c2Func(0);
     mFunc(0);
     qFunc(0);
-    pFunc(0);
 }
 function setPrix() {
     var prix = document.querySelector("#prix");
@@ -58,7 +73,6 @@ function setPrix() {
     currentPrix += goodSlip.couleur2[customProdiut.cou2][2];
     currentPrix += goodSlip.motif[customProdiut.motif][1];
     currentPrix += goodSlip.qualiter[customProdiut.qualiter];
-    currentPrix += goodSlip.prixImage*customProdiut.position;
     currentPrix = Math.round(currentPrix*100)/100; //arrondie au centieme
     customProdiut.prix = currentPrix;
     prix.innerHTML = "Prix : "+ Math.round(currentPrix*customProdiut.quantiter*100)/100 + "€";//arrondie enoer parcque js ne sais pas multiplier par 3 ...
@@ -67,32 +81,42 @@ function setPrix() {
 /*################################## canvas ########################################*/
 
 function draw() {
-    var imgSlip = new Image;
-    imgSlip.src = goodSlip.imgSrc;
-    imgSlip.onload = function(){
-        ctx.drawImage(imgSlip, 0, 0);
+    
+    ctx1.globalCompositeOperation = "source-over"; //on repasse en mode dafficha par defaut
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height); //on efface tout
+    ctx1.drawImage(imgSlip, 0, 0); //affiche l'image 
+    ctx1.globalCompositeOperation = "source-in"; // mode d'affichage uniquement a l'intereur de l'image
+    ctx1.fillStyle = "#ffffff"; // un cree un carre de la couleur voulue
+    ctx1.fillRect(0, 0, canvas1.width, canvas1.height); // un remplit d'un carre de la couleur voulue
 
-        // set composite mode
-        ctx.globalCompositeOperation = "source-in";
-        // draw color
-        ctx.fillStyle = goodSlip.couleur1[customProdiut.cou1][0];
-        ctx.fillRect(0, 0, c.width, c.height);
-      }
+    ctx2.globalCompositeOperation = "source-over";
+    ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+    ctx2.drawImage(imgSlipInt, 0, 0);
+    ctx2.globalCompositeOperation = "source-in";
+    ctx2.fillStyle = goodSlip.couleur1[customProdiut.cou1][0];
+    ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
+
+    ctx3.globalCompositeOperation = "source-over";
+    ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+    ctx3.drawImage(imgSlipMotif, 0, 0);
+    ctx3.globalCompositeOperation = "source-in";
+    ctx3.fillStyle = goodSlip.couleur2[customProdiut.cou2][0];
+    ctx3.fillRect(0, 0, canvas3.width, canvas3.height);
 }
 
 /*################################## section prix ########################################*/
 
 function sendToPanier(){
-    if (typeof(localStorage["panier"]) == "undefined"){
-        localStorage["panier"] = JSON.stringify([]);
-    }
+    customProdiut.img1 = canvas1.toDataURL();
+    customProdiut.img2 = canvas2.toDataURL();
+    customProdiut.img3 = canvas3.toDataURL();
     var panier = JSON.parse(localStorage["panier"]);
     panier.push(customProdiut);
     localStorage["panier"] = JSON.stringify(panier);
     console.log(localStorage);
     console.log(JSON.parse(localStorage["panier"]));
 
-    location = "../panier/panier.html";
+    document.location = "../panier/panier.html";
 }
 
 function subLessFunc(){
@@ -125,6 +149,25 @@ function setCouleur() {
     }
 }
 
+function hideAndSeek(vision) {
+    lignes[2].style.transition = "height 0.5s, padding 0.5s";
+    if (vision){
+        lignes[2].style.height = lignes[1].clientHeight + "px";
+        lignes[2].style.paddingTop = "1em";
+        lignes[2].style.paddingBottom = "1em";
+        lignes[2].style.overflow = "hidden";
+        lignes[2].style.borderTop = "1px solid rgb(180, 180, 180)";
+    }
+    else {
+        lignes[2].style.height = "0px";
+        lignes[2].style.paddingTop = "0";
+        lignes[2].style.paddingBottom = "0";
+        lignes[2].style.overflow = "hidden";
+        lignes[2].style.borderTop = "none";
+        c2Func(0);
+    }
+}
+
 function tFunc(x){
     var btnText = document.querySelectorAll(".btnText");
     for (i of btnText){
@@ -154,6 +197,7 @@ function c2Func(x) {
     cercleCouleur2[x].style.borderColor = "steelblue";
     customProdiut.cou2 = x;
     setPrix();
+    draw()
 }
 
 function mFunc(x) {
@@ -163,6 +207,15 @@ function mFunc(x) {
     }
     cercleMotif[x].style.borderColor = "steelblue";
     customProdiut.motif = x;
+    if (x != 0){
+        imgSlipMotif.src = goodSlip.imgSrc.replace(/.png/, " (" + (x + 1) + ").png");
+        hideAndSeek(true);
+    }
+    else{
+        imgSlipMotif.src = "";
+        draw();
+        hideAndSeek(false);
+    }
     setPrix();
 }
 function qFunc(x) {
@@ -174,16 +227,5 @@ function qFunc(x) {
     btnGText[x].style.borderColor = "steelblue";
     btnGText[x].style.fontWeight = "bold";
     customProdiut.qualiter = x;
-    setPrix();
-}
-function pFunc(x) {
-    var btnG2Text = document.querySelectorAll(".btnG2Text");
-    for (i of btnG2Text){
-        i.style.borderColor = "white";
-        i.style.fontWeight = "normal";
-    }
-    btnG2Text[x].style.borderColor = "steelblue";
-    btnG2Text[x].style.fontWeight = "bold";
-    customProdiut.position = x+1;
     setPrix();
 }

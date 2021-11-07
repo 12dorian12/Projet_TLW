@@ -1,0 +1,40 @@
+{
+    "user": [
+        {
+            "mail": "dorian.isselin@cpe.fr",
+            "mdp":"pif",
+            "prenom":"Dorian",
+            "nom":"Isselin",
+            "num":"06 45 67 38 56",
+            "adresse":"63 avenue Roger Salengro",
+            "ville":"69100, villeurbanne"
+        },
+        {
+            "mail": "lea.colomer@cpe.fr",
+            "mdp":"papillon",
+            "prenom":"Léa",
+            "nom":"Colomer",
+            "num":"06 12 34 56 78",
+            "adresse":"29 rue Léon Gambetta",
+            "ville":"69190, villeurbanne"
+        },
+        {
+            "mail": "alexis.gueux@cpe.fr",
+            "mdp":"biquette",
+            "prenom":"Alexis",
+            "nom":"Gueux",
+            "num":"06 98 76 54 32",
+            "adresse":"2 Grande rue Saint Clair",
+            "ville":"69300, Caluire-et-cuire"
+        },
+        {
+            "mail": "test",
+            "mdp":"test",
+            "prenom":"Matrix",
+            "nom":"Douze",
+            "num":"07 12 07 12 07",
+            "adresse":"je sais pas",
+            "ville":"us"
+        }
+    ]
+}

@@ -3,10 +3,10 @@
     <head>
         <title>Mon Caleçon en ligne</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../principale/media/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/media/panier.png">
 
-        <link rel="stylesheet" href="../principale/header&footer.css">
+        <link rel="stylesheet" href="/principale/header&footer.css">
         <link rel="stylesheet" href="personnalisation.css">
     </head>
     <body>
@@ -17,7 +17,9 @@
             <div id="contenaire">
 
                 <div id="canvasCont">
-                    <canvas id="customCanvas" width = "250" height="250"></canvas>
+                    <canvas id="customCanvas1" width = "500" height="500"></canvas>
+                    <canvas id="customCanvas2" width = "500" height="500"></canvas>
+                    <canvas id="customCanvas3" width = "500" height="500"></canvas>
                 </div>
 
                 <div id="sectionPrix">
@@ -29,9 +31,7 @@
                         <div id="addMore" onclick="addMoreFunc()"> + </div> 
                     </div>
                     <button class="buyBtn" onclick="sendToPanier()">
-                        <div class="bororo"></div>
-                        <div class="rototo"></div>
-                        <div class="achat">Ajouter au panier</div>
+                        Ajouter au panier
                     </button>
                 </div>
 
@@ -86,6 +86,8 @@
                             <input type="button" class="btnGText" value="Microfibre" onclick="qFunc(3)">
                         </div> 
                     </div>
+                    <div id="btnCentre"><input type="button" id="reset" value="Reset" onclick="resetStyle()"></input></div>
+                <!-- 
                     <div id="image" class="formLigne">
                         <div class="ligneName">Image : </div>
                         <div class="allInput"><input type="button" id="btnLien" value="Load"></div>
@@ -99,6 +101,7 @@
                             <input type="button" class="btnG2Text" value="Gauche" onclick="pFunc(3)">
                         </div> 
                     </div>
+                -->
                 </form>
             </div>
         </main>
