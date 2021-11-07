@@ -13,7 +13,7 @@ function goToGoodBlock(e) {
         goodBlock = goodBlock.parentNode;
     }
     localStorage["slipType"] = goodBlock.id;
-    document.location.href = "/12dorian12.github.io/personnalisation/personnalisation.html";
+    document.location.href = "/12dorian12.github.io/Projet_TLW/personnalisation/personnalisation.html";
 }
 function listSelect(index) {
     var listeLi = document.querySelectorAll(".listeLi")
