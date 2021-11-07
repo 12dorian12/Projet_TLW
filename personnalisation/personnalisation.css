@@ -221,19 +221,19 @@ main{
 }
 
 .motif1{
-    background-image: url(/media/imageMotif/uni.png);
+    background-image: url(https://12dorian12.github.io/Projet_TLW/media/imageMotif/uni.png);
 }
 .motif2{
-    background-image: url(/media/imageMotif/diagonal.png);
+    background-image: url(https://12dorian12.github.io/Projet_TLW/media/imageMotif/diagonal.png);
 }
 .motif3{
-    background-image: url(/media/imageMotif/careau.png);
+    background-image: url(https://12dorian12.github.io/Projet_TLW/media/imageMotif/careau.png);
 }
 .motif4{
-    background-image: url(/media/imageMotif/carre.png);
+    background-image: url(https://12dorian12.github.io/Projet_TLW/media/imageMotif/carre.png);
 }
 .motif5{
-    background-image: url(/media/imageMotif/moitier.png);
+    background-image: url(https://12dorian12.github.io/Projet_TLW/media/imageMotif/moitier.png);
 }
 
 @media only screen and (min-width: 601px) {
