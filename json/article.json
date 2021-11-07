@@ -2,7 +2,7 @@
     "slip" : [
         {
             "nom" : "Slip Kangourou",
-            "imgSrc" : "/media/sousVetement/slipKangourou.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/slipKangourou.png",
             "prix" : 14.99,
             "commentaires" : ["petit","rapide","confortable"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -14,7 +14,7 @@
         },
         {
             "nom" : "Shorty",
-            "imgSrc" : "/media/sousVetement/shorty.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/shorty.png",
             "prix" : 19.99,
             "commentaires" : ["court","confortable","pour la vie de tous les jours"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -26,7 +26,7 @@
         },
         {
             "nom" : "Jockstrap",
-            "imgSrc" : "/media/sousVetement/jockstrap.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/jockstrap.png",
             "prix" : 19.99,
             "commentaires" : ["court","léger","le slip qui respire"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -38,7 +38,7 @@
         },
         {
             "nom" : "Caleçon",
-            "imgSrc" : "/media/sousVetement/calecon.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/calecon.png",
             "prix" : 19.99,
             "commentaires" : ["agréable","original","confortable"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -50,7 +50,7 @@
         },
         {
             "nom" : "Boxer court",
-            "imgSrc" : "/media/sousVetement/boxerCourt.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/boxerCourt.png",
             "prix" : 19.99,
             "commentaires" : ["valeur sûre","basique","tout terrain"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -62,7 +62,7 @@
         },
         {
             "nom" : "Boxer long",
-            "imgSrc" : "/media/sousVetement/boxerLong.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/boxerLong.png",
             "prix" : 19.99,
             "commentaires" : ["confortable","ergonomique","pour les dimanches tranquille"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -74,7 +74,7 @@
         },
         {
             "nom" : "Slip",
-            "imgSrc" : "/media/sousVetement/slip.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/slip.png",
             "prix" : 19.99,
             "commentaires" : ["simple","incontournable","un grand classique"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -86,7 +86,7 @@
         },
         {
             "nom" : "String",
-            "imgSrc" : "/media/sousVetement/String.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/String.png",
             "prix" : 19.99,
             "commentaires" : ["osé","minimaliste","sexy"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
@@ -98,7 +98,7 @@
         },
         {
             "nom" : "Bikini",
-            "imgSrc" : "/media/sousVetement/bikini.png",
+            "imgSrc" : "https://12dorian12.github.io/Projet_TLW/media/sousVetement/bikini.png",
             "prix" : 19.99,
             "commentaires" : ["osé","confortable","validé par les brésiliens"],
             "couleur1" : [["#FFFFFF","lien",0], ["#D90F0B","lien",1.12],["#A900EF","lien",1.12],["#0CBCF8","lien",1.12],["#16F80C","lien",1.12]],
