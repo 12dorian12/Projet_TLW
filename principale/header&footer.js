@@ -7,7 +7,7 @@
 /*################################## definition des variable du local storage ########################################*/
 
 if (typeof(localStorage["user"]) == "undefined"){
-    fetch("https://12dorian12.github.io/Projet_TLW/json/people.json")
+    fetch("/12dorian12.github.io/Projet_TLW/json/people.json")
     .then((response) => response.json())
     .then((perso)=>{
         localStorage["user"]=JSON.stringify(perso.user);
@@ -47,7 +47,7 @@ fetch("https://12dorian12.github.io/Projet_TLW/principale/header.html") //fetch 
     var user = JSON.parse(localStorage["user"]);
     if (localStorage["etatConnexion"] != -1){
         document.querySelector('#titreConnexion').innerHTML = user[localStorage["etatConnexion"]].prenom;
-        document.querySelector('#lienConnexion').href = "https://12dorian12.github.io/Projet_TLW/seConnecter/connected/connected.html";
+        document.querySelector('#lienConnexion').href = "/12dorian12.github.io/Projet_TLW/seConnecter/connected/connected.html";
     }
     else{
         document.querySelector('#titreConnexion').innerHTML = "Se Connecter";
@@ -55,7 +55,7 @@ fetch("https://12dorian12.github.io/Projet_TLW/principale/header.html") //fetch 
    
 });
 
-fetch("https://12dorian12.github.io/Projet_TLW/principale/footer.html")
+fetch("/12dorian12.github.io/Projet_TLW/principale/footer.html")
 .then(response => response.text())
 .then(body => {
     document.querySelector('footer').innerHTML = body;
