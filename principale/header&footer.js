@@ -56,13 +56,13 @@ fetch(racineDuSite+"/principale/header.html")
     }
 
     /*################################## redefinition des liens selon la racine du site ########################################*/
-    document.querySelector("#headProfil").style.backgroundImage = "url('"+racineDuSite+"/media/profilB.png')"
-    document.querySelector("#headPanierImg").style.backgroundImage = "url('"+racineDuSite+"/media/panierB.png')"
     document.querySelector("#toTheTop").style.backgroundImage = "url('"+racineDuSite+"/media/upArrow.png')"
     document.querySelector("#headMonCalecon").href = racineDuSite+"/index.html"
-    document.querySelector("#headLogo").src = racineDuSite+"/media/New-logo.png"
     document.querySelector("#lienConnexion").href = racineDuSite+"/seConnecter/connexion/connexion.html"
     document.querySelector("#headPanier").href = racineDuSite+"/panier/panier.html"
+    document.querySelector("#headLogo").src = racineDuSite+"/media/New-logo.png"
+    document.querySelector("#headProfil").src = racineDuSite+"/media/profilB.png"
+    document.querySelector("#headPanierImg").src = racineDuSite+"/media/panierB.png"
    
 });
 
