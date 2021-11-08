@@ -158,7 +158,7 @@ function fillBon(distance){
     document.querySelector('#totalRemise').innerHTML = totalRemise + " €"
 
     var expresse = 0;
-    if (JSON.parse(localStorage["dateVal"])[1] == 0) {
+    if (JSON.parse(localStorage["dateVal"])[1] == 1) {
         document.querySelector("#expresse").innerHTML = "8 €";
         expresse = 8
     }

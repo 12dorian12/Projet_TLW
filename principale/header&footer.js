@@ -3,11 +3,12 @@
 "//" relatif au protocole
 */
 
+var racineDuSite = "https://12dorian12.github.io/Projet_TLW"
 
 /*################################## definition des variable du local storage ########################################*/
 
 if (typeof(localStorage["user"]) == "undefined"){
-    fetch("https://12dorian12.github.io/Projet_TLW/json/people.json")
+    fetch(racineDuSite+"/json/people.json")
     .then((response) => response.json())
     .then((perso)=>{
         localStorage["user"]=JSON.stringify(perso.user);
@@ -39,26 +40,41 @@ if (typeof(localStorage["infoClient"]) == "undefined"){
 /*################################## XMLHttpRequest ########################################*/
 
 
-fetch("https://12dorian12.github.io/Projet_TLW/principale/header.html") //fetch renvoie une promesse resolue avec un objet response 
-.then(response => response.text()) //response.text renvoie une promesse resolue avec un USVString (qui contient le text du stream de response)
+fetch(racineDuSite+"/principale/header.html")
+.then(response => response.text())
 .then(body => {
     document.querySelector('header').innerHTML = body;
     window.addEventListener("scroll", toTopHidden);
     var user = JSON.parse(localStorage["user"]);
     if (localStorage["etatConnexion"] != -1){
         document.querySelector('#titreConnexion').innerHTML = user[localStorage["etatConnexion"]].prenom;
-        document.querySelector('#lienConnexion').href = "https://12dorian12.github.io/Projet_TLW/seConnecter/connected/connected.html";
+        // utilisation de chemein absolue car la fonction est utiliser dans plusieur fichiers diferents
+        document.querySelector('#lienConnexion').href = racineDuSite+"/seConnecter/connected/connected.html"; 
     }
     else{
         document.querySelector('#titreConnexion').innerHTML = "Se Connecter";
     }
+
+    /*################################## redefinition des liens selon la racine du site ########################################*/
+    document.querySelector("#headProfil").style.backgroundImage = "url('"+racineDuSite+"/media/profilB.png')"
+    document.querySelector("#headPanierImg").style.backgroundImage = "url('"+racineDuSite+"/media/panierB.png')"
+    document.querySelector("#toTheTop").style.backgroundImage = "url('"+racineDuSite+"/media/upArrow.png')"
+    document.querySelector("#headMonCalecon").href = racineDuSite+"/index.html"
+    document.querySelector("#headLogo").src = racineDuSite+"/media/New-logo.png"
+    document.querySelector("#lienConnexion").href = racineDuSite+"/seConnecter/connexion/connexion.html"
+    document.querySelector("#headPanier").href = racineDuSite+"/panier/panier.html"
    
 });
 
-fetch("https://12dorian12.github.io/Projet_TLW/principale/footer.html")
+fetch(racineDuSite+"/principale/footer.html")
 .then(response => response.text())
 .then(body => {
     document.querySelector('footer').innerHTML = body;
+
+    /*################################## redefinition des liens selon la racine du site ########################################*/
+    document.querySelector("#footPropos").href = racineDuSite+"/propos&contact/propos&contact.html"
+    document.querySelector("#footMieux").href = racineDuSite+"/propos&contact/propos&contact.html"
+    document.querySelector("#footNous").href = racineDuSite+"/propos&contact/propos&contact.html"
 });
 
 
@@ -72,4 +88,3 @@ function toTopHidden(e){
         document.querySelector('#toTheTop').style.visibility = "hidden";
     }
 }
-

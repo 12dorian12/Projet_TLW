@@ -13,7 +13,7 @@ function goToGoodBlock(e) {
         goodBlock = goodBlock.parentNode;
     }
     localStorage["slipType"] = goodBlock.id;
-    document.location.href = "https://12dorian12.github.io/Projet_TLW/personnalisation/personnalisation.html";
+    document.location.href = "personnalisation/personnalisation.html";
 }
 function listSelect(index) {
     var listeLi = document.querySelectorAll(".listeLi")
@@ -49,7 +49,7 @@ function fonOpenFilter(){
 
 /*################################## XMLHttpRequest ########################################*/
 
-fetch("https://12dorian12.github.io/Projet_TLW/json/article.json")
+fetch("json/article.json")
 .then((response) => response.json())
 .then((articles)=>{
     for([i, art] of articles.slip.entries()){

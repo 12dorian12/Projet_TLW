@@ -4,14 +4,14 @@
         <title>Mon Caleçon en ligne</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="icon" href="/media/panier.png">
+        <link rel="icon" href="../media/panier.png">
         
-        <link rel="stylesheet" href="/principale/header&footer.css">
+        <link rel="stylesheet" href="../principale/header&footer.css">
         <link rel="stylesheet" href="panier.css">
     </head>
     
 
-    <body onload="test()">
+    <body>
 
         <header>
 
@@ -19,55 +19,50 @@
         
         <main>
 
-            <div id="panier" class="bl">
-              
-                <template id="panierListe">
-                    <div class="slip">
-                        <div class="photo">
-                            <img  alt="" id="img1">
-                            <img  alt="" id="img2">
-                            <img  alt="" id="img3">
-                        </div>
-                        <!--<div id="canvasCont">
-                            <canvas id="customCanvas1" width = "500" height="500"></canvas>
-                            <canvas id="customCanvas2" width = "500" height="500"></canvas>
-                            <canvas id="customCanvas3" width = "500" height="500"></canvas>
-                        </div>-->
-                        <div class="nom" ><h1></h1></div>
-                        <div class="prix"><h1></h1></div>
-                        <button class="imgPoub"><img src="/media/poubelle.png" alt=""></button>
-                        <div class="quantiter"> 
-                            <div class="subLess" onclick="subLessFunc(this)"> - </div> 
-                            <div class="numQuant"> 1 </div> 
-                            <div class="addMore" onclick="addMoreFunc(this)"> + </div> 
-                        </div>
-                    </div>
-                </template>
-                
-                
-            
+            <div id="panier">
+                <!-- On positionne les articles du panier ici selon le template  -->
             </div>
             
-            <div id="paiement" class="bl">
+            <div id="bg"><div id="paiement">
                 <div id="ligneP">
-                    <h1 id="totalH1">Total:</h1>
-                    <h2 id="prixH1"></h2>
+                    Total : <div id="prixTot"></div>
                 </div>
-                <p id="adresse">Adresse de Livraison:</p><div id="adresseLiv"></div>
-                <p>Date de livraison:</p><input type="date" id="dateLiv" onchange="recharger()">
-                <div id="modeExp"><p>Mode express:+ 8 €</p></div><br>
+                <div id="ligneD">
+                    Date de livraison : <input type="date" id="dateLiv" onchange="recharger()" data-date-inline-picker="true" >
+                </div>
+                <div id="modeExp">
+                    <p>Mode express: 8 €</p>
+                </div>
                 <button type="button" id="bu" onclick="goToValideForm()">Commander</button>
-            </div>
+            </div></div>
 
-            </main>
+            <template id="panierListe">
+                <div class="slip">
+                    <div class="photo">
+                        <img  alt="" id="img1">
+                        <img  alt="" id="img2">
+                        <img  alt="" id="img3">
+                    </div>
+                    <div class="nom" ></div>
+                    <div class="prix"></div>
+                    <button class="imgPoub"><img src="../media/poubelle.png" alt=""></button>
+                    <div class="quantiter"> 
+                        <div class="subLess" onclick="subLessFunc(this)"> - </div> 
+                        <div class="numQuant"> 1 </div> 
+                        <div class="addMore" onclick="addMoreFunc(this)"> + </div> 
+                    </div>
+                </div>
+            </template>
 
-            <footer>
+        </main>
 
-            </footer>
-    
+        <footer>
+
+        </footer>
+            
     </body>
 
-    <script src="/principale/header&footer.js"></script>
+    <script src="../principale/header&footer.js"></script>
     <script src="panier.js"></script>
 
 </html>

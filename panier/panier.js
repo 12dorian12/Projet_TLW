@@ -2,7 +2,6 @@ var panier = document.querySelector("#panier");
 let template = document.querySelector("#panierListe");
 
 
-
 fetch("../json/article.json")
 .then((response) => response.json())
 .then((articles)=>{
@@ -62,7 +61,7 @@ function setPrix (){
         prix += (calecon.prix)*(calecon.quantiter);
         document.querySelector("#prix"+index).innerHTML= parseInt((calecon.prix)*(calecon.quantiter)*100)/100+"€"
     }
-    document.querySelector("#prixH1").innerHTML = parseInt(prix*100)/100+"€";
+    document.querySelector("#prixTot").innerHTML = parseInt(prix*100)/100+"€";
 }
 
 function subLessFunc(cible){
@@ -89,8 +88,9 @@ function addMoreFunc(cible){
     setPrix()
 }
 
+/*
 
-
+*/
 function recharger() {
     var prix =0
     var dateUser= (document.querySelector("#dateLiv")).valueAsNumber;
@@ -107,18 +107,6 @@ function recharger() {
         dateInfo[1] = 0;
         localStorage["dateVal"]= JSON.stringify(dateInfo);
         setPrix()
-    }
-}
-
-function test(){
-    var user = JSON.parse(localStorage["user"])
-    document.querySelector("#modeExp").style.display = "none";
-
-    if (localStorage["etatConnexion"] != -1){
-        document.querySelector("#adresseLiv").innerHTML=user[localStorage["etatConnexion"]].adresse;
-    }
-    else{
-        document.querySelector("#adresse").style.display = "none";
     }
 }
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "BM";
-    src: url("https://12dorian12.github.io/Projet_TLW//media/BerthaMelanie.ttf");
+    src: url("https://12dorian12.github.io/Projet_TLW/media/BerthaMelanie.ttf");
 }
 html{
     scroll-behavior: smooth;
@@ -105,6 +105,7 @@ footer{
     display: flex;
     bottom: 0;
     background-color: #1B2631;
+    height: 50px;
 }
 footer > a{
     margin: 1em auto;
@@ -115,9 +116,9 @@ footer > a{
 #toTheTop{
     z-index: 12;
     position: fixed;
-    bottom: 10px;
-    right: 25px;
-    background-image: url("https://12dorian12.github.io/Projet_TLW/media/upArrow.png");
+    bottom: 53px;
+    right: 3px;
+    background-image: url("/media/upArrow.png");
     background-size: cover;
     background-position: center;
     width: 60px;
