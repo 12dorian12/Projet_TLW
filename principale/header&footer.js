@@ -3,7 +3,7 @@
 "//" relatif au protocole
 */
 
-var racineDuSite = "https://12dorian12.github.io/Projet_TLW"
+var racineDuSite = "12dorian12.github.io/Projet_TLW"
 
 /*################################## definition des variable du local storage ########################################*/
 
